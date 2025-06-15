@@ -19,7 +19,7 @@ body {
   padding: 0;
   width: 100%;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: hidden; /* yatay kaymayı engeller */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,21 +42,7 @@ body {
   }
 }
 
-
-.qr-code {
-  width: 100%;
-  max-width: 300px; 
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  object-fit: contain;
-}
-@import url("https://fonts.googleapis.com/css2?family=Gill+Sans&display=swap");
-
 body {
-  margin: 0;
-  padding: 0;
-
   background-color: #ffc53d;
   text-align: center;
 }
@@ -69,38 +55,55 @@ body {
   max-width: 100%;
   height: auto;
   display: block;
-  
 }
 
 .title {
   font-size: 102px;
   font-weight: 750;
-  background: linear-gradient(to bottom, rgb(86, 213, 255), rgb(0, 71, 143));
+  background: linear-gradient(to top, #00b1f7, #005feb);
   font-style: italic;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 0; 
-  padding: 0; 
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
 }
-
 
 .subtitle {
   font-size: 44px;
   font-weight: bold;
   color: #2b2b2b;
-  margin-top: 10px; /* Boşluğu azaltmak için küçük bir değer */
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  line-height: 1;
 }
-  
-
-
 
 .qr-code {
   margin-top: 30px;
-  width: 5000px;
+  width: 100%;
+  max-width: 300px; /* masaüstünde de mantıklı sınır */
   height: auto;
 }
+
 h1 {
   margin: 0;
   padding: 0;
+}
+
+/* Mobil uyumluluk için */
+@media (max-width: 600px) {
+  .title {
+    font-size: 65px; /* başlık küçülür */
+  }
+
+  .subtitle {
+    font-size: 26px; /* alt başlık küçülür */
+    margin-bottom: 40px;
+  }
+
+  .qr-code {
+    max-width: 60vw; /* ekranın %90’ı kadar genişlik */
+    width: 100%;
+  }
 }
