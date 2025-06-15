@@ -21,7 +21,7 @@ body {
   max-width: 100%;
   min-height: 100vh;
   overflow-x: hidden; 
-  overflow-y: hidden
+  overflow-y: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
