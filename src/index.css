@@ -20,7 +20,7 @@ body {
   width: 100%;
   max-width: 100%;
   min-height: 100vh;
-  overflow-x: hidden; /* yatay scroll engelle */
+  overflow-x: hidden; 
   overflow-y: hidden
   position: relative;
   display: flex;
