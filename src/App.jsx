@@ -8,10 +8,16 @@ function App() {
 
   return (
     <>
-      <div>
-        <img src={zinter} alt="Zinter Logo" style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '0 auto' }} />
+      <div className="container">
+     
+        <h1 className="title">ZINTERIN</h1>
+        <p className="subtitle">строительные смеси</p>
+        <img
+          src={qr}
+          alt="QR Code"
+          className="qr-code"
+        />
       </div>
-      <img src={qr} alt="QR Code" className="qr-code" />
     </>
   );
 }
